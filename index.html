@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" ng-app="chromecastDemo" data-cast-api-enabled="true">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube API Chromecast Experiment</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/app.css"/>
+</head>
+  <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
+ <div class="navbar navbar-fixed-top">
+   <div class="navbar-inner">
+     <div class="container">
+ <a class="brand" href="index.html">YouTube API Chromecast Experiment</a>
+                    <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="#/sender">Sample Sender Chrome App</a></li>
+              <li><a href="#/receiver">Sample Receiver Chrome App</a></li>
+            </ul>
+     </div>
+   </div>
+ </div>
+    <div class="container">
+<div ng-view></div>
+      <hr>
+      <footer id="footer">
+        <p class="pull-right"><a href="#top">Back to top</a></p>
+        Jarom McDonald, Office of Digital Humanities, Brigham Young University<br/>
+        Code licensed under the <a href="http://opensource.org/licenses/MIT">MIT License</a>.<br/>
+      </footer>
+
+    </div><!-- /container -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+  <script src="lib/angularui/ui-bootstrap-tpls-0.3.0.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+</body>
+</html>
