@@ -2,7 +2,8 @@
 
 /* Controllers */
 
-function SenderCtrl($scope, $window, api) {
+  function SenderCtrl($scope, $window, $http, api, cfg) {
+  $scope.receiver_to_play=cfg.chromecastDevice;
   $scope.ytSearch = function(character) {
   	api.search(character,{'channelId':'UCNcdbMyA59zE-Vk668bKWOg'}).success(function(apiresults) {
   		$scope.video=apiresults.items[Math.floor(Math.random()*apiresults.items.length)];
@@ -20,9 +21,8 @@ function SenderCtrl($scope, $window, api) {
   };
 
   var onReceiverList = function(list) {
-    var receiver_to_play="{THE NAME YOU GAVE YOUR CHROMECAST DEVICE}";
     angular.forEach(list,function(v,k) {
-	if (v.name==receiver_to_play) {
+	if (v.name==$scope.receiver_to_play) {
 		$scope.receiver=v;
 	}
     });
@@ -31,11 +31,12 @@ function SenderCtrl($scope, $window, api) {
 
   var doLaunch = function() {
     var lr = new cast.LaunchRequest($scope.appId, $scope.receiver);
+    console.log($scope.video);
     lr.parameters = "v="+$scope.video.id.videoId;
     lr.description = new cast.LaunchDescription();
     lr.description.text = $scope.video.snippet.title;
     lr.description.url = "http://youtu.be/"+$scope.video.id.videoId;
-    cast_api.launch(lr, onLaunch);
+    //cast_api.launch(lr, onLaunch);
   };
 
   var onLaunch = function(activity) {
@@ -54,4 +55,4 @@ function SenderCtrl($scope, $window, api) {
 
 }
 
-SenderCtrl.$inject = ['$scope','$window','YtApi'];
+SenderCtrl.$inject = ['$scope','$window','$http','YtApi','appConfig'];
