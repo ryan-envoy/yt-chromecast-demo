@@ -31,16 +31,15 @@
 
   var doLaunch = function() {
     var lr = new cast.LaunchRequest($scope.appId, $scope.receiver);
-    console.log($scope.video);
     lr.parameters = "v="+$scope.video.id.videoId;
     lr.description = new cast.LaunchDescription();
     lr.description.text = $scope.video.snippet.title;
     lr.description.url = "http://youtu.be/"+$scope.video.id.videoId;
-    //cast_api.launch(lr, onLaunch);
+    cast_api.launch(lr, onLaunch);
   };
 
   var onLaunch = function(activity) {
-	console.log("cast");
+	// something here to do after cast begins
   };
 
   $window.addEventListener("message", function(event) {
