@@ -5,6 +5,7 @@
   <title>YouTube API Chromecast Experiment</title>
 
   <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/font-awesome.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
   <body class="preview" id="top" data-spy="scroll" data-target=".subnav" data-offset="80">
@@ -14,15 +15,15 @@
  <a class="brand" href="index.html">YouTube API Chromecast Experiment</a>
                     <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#/sender">Sample Sender Chrome App</a></li>
-              <li><a href="#/receiver">Sample Receiver Chrome App</a></li>
+              <li><a href="#/sender">Simple Sender Chrome App (using built-in YouTube Receiver)</a></li>
+              <li><a href="#/sender-for-receiver">Sender/Receiver Chrome App (where receiver uses YouTube API)</a></li>
             </ul>
      </div>
    </div>
  </div>
     <div class="container">
 <div ng-view></div>
-      <hr>
+     <hr>
       <footer id="footer">
         <p class="pull-right"><a href="#top">Back to top</a></p>
         Jarom McDonald, Office of Digital Humanities, Brigham Young University<br/>
@@ -31,11 +32,12 @@
 
     </div><!-- /container -->
 
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
-  <script src="lib/angularui/ui-bootstrap-tpls-0.3.0.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+  <script src="lib/angularui/ui-bootstrap-tpls-0.6.0.min.js"></script>
   <script src="js/config.local.js"></script>
-  <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

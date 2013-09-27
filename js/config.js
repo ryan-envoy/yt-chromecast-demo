@@ -1,22 +1,24 @@
-/**
-  Contains configuration data for connecting to the API.
-  
-  WARNING: Do not modify this file directly. Make a copy of it into
-  config.local.js instead. Any identical constant names in config.local.js
-  will override those of this configuration.
-**/
 'use strict';
 
 if(CHROMECASTDEMO_CONFIG === undefined) {
   var CHROMECASTDEMO_CONFIG = angular.module('chromecastDemo.config', []).
-  factory('appConfig', ['youtubeKey', 'chromecastDevice', function(youtubeKey,chromecastDevice) {
+  factory('appConfig', ['youtubeKey','traktKey','freebaseKey','chromecastDevice','appId','msgNamespace',function(youtubeKey,traktKey,freebaseKey,chromecastDevice,appId,msgNamespace) {
     return {
       youtubeKey: youtubeKey,
-      chromecastDevice: chromecastDevice
+      traktKey: traktKey,
+      freebaseKey: freebaseKey,
+      appId: appId,
+      chromecastDevice: chromecastDevice,
+      msgNamespace: msgNamespace
     };
   }]);
 }
 
 CHROMECASTDEMO_CONFIG.
-  value('youtubeKey', 'your key here').
-  value('chromecastDevice', 'name of your device');
+  value('youtubeKey', 'YOUR_YOUTUBE_KEY').
+  value('traktKey', 'YOUR_TRAKT_KEY').
+  value('freebaseKey', 'YOUR_FREEBASE_API_KEY').
+  //value('appId', 'YOUR_APP_ID'). // use this if you are using the custom receiver demo
+  //value('appId', 'YouTube'). // uncomment this if you are using the stock YouTube receiver demo
+  value('chromecastDevice', 'NAME_YOU_GAVE_YOUR_CHROMECAST').
+  value('msgNamespace','YOUR_NAMESPACE_FOR_MESSAGES'); // in the form com.example.www

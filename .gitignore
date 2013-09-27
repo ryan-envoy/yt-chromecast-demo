@@ -1,3 +1,4 @@
 !.gitignore
 *.log
 js/config.local.js
+receiver_app/js/config.local.js

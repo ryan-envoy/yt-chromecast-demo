@@ -1,0 +1,3 @@
+<div ng-init="trending()">
+<img id="{{show.tvdb_id}}" class="poster" ng-repeat="show in topten" ng-src="{{show.poster}}" ng-click="showDetails('{{$index}}')"/>
+</div>

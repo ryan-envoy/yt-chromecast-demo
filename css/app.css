@@ -1,7 +1,32 @@
 /* app css stylesheet */
 
-img.disney-character {
+img.disney-character, img.poster {
 	height:200px;
 	margin:10px 10px 0 0;
 	cursor: pointer;
+}
+
+img.large-poster {
+	height: 500px;
+	margin-left: 200px;
+}
+
+.modal { width: 800px;
+                 min-height:400px;
+                 margin-left:-400px;
+                 max-height:90%;
+                 overflow-y:auto;
+                }
+
+i.icon-large {
+	color: #d44413;
+	cursor: pointer;
+}
+
+#castbtns {
+	float:left;
+}
+
+#closebtn {
+	float:right;
 }

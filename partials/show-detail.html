@@ -1,0 +1,20 @@
+  <div class="container-fluid" id="partial-container-modal">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="modal-header"><strong>{{ show.title }}</strong></div>
+        <img class="large-poster" ng-src="{{ show.poster }}"/>
+      </div>
+    </div>
+    <div class="modal-footer btn-close">
+	<div id='castbtns' ng-controller='SenderCtrl'>
+	  <div id="controls" ng-show="casting">
+	  <i class="icon-play icon-large" ng-hide="playing" ng-click="ytPlaybackCmd('playVideo');" id="playBtn"></i>
+	  <i class="icon-pause icon-large" ng-show="playing" ng-click="ytPlaybackCmd('pauseVideo');" id="pauseBtn"></i>
+	  <i class="icon-stop icon-large" ng-click="ytPlaybackCmd('stopVideo');" id="stopBtn"></i>
+	  </div>
+          <button ng-click="freebaseSearch()" class="btn btn-primary" ng-hide="casting">Cast</button>
+	</div>
+          <button id='closebtn' ng-click="cancel()" class="btn btn-primary">Close</button>
+    </div>
+  </div>
+
