@@ -8,6 +8,7 @@ The first demo app is a sender-only app. It is designed to present a selection o
 1) Create a js/config.local.js file (based on the js/config.js template) which includes your YouTube API key and the name of the Chromecast device you're trying to cast to.
 2) Place the app on a domain that you have access to and that runs an actual web server (i.e. not the file:// protocol)
 3) Whitelist, in your browser extension, the domain you've loaded the sender app on to.
+4) You can override the appID that you set in your config file with the <chromecast appid="{new_app_id}"/> directive
 
 Once you've done these steps, you should be able to visit the app in your browser (make sure the computer that you're on is located on the same network as the device you're trying to cast to) and choose the "sender-only" demo, and run it.
 
@@ -21,5 +22,6 @@ To get this second app ready, you must do the following:
 2) Create a second config file -- this one at receiver_app/js/config.local.js (based on the receiver_app/js/config.js template) which includes your YouTube API key, your Freebase API key, your app ID, and your namespace. 
 3) Place the app on a domain that you have access to and that runs an actual web server (i.e. not the file:// protocol). Make sure that the receiver app is resolvable by the URL that you submitted to the app_id whitelisting process (it must match EXACTLY) and that the sender and receiver are at different URLs.
 4) Whitelist, in your browser extension, the domain you've loaded the sender app on to.
+5) You can override the appID that you set in your config file with the <chromecast appid="{new_app_id}"/> directive
 
 Once you've done these steps, you should be able to visit the app in your browser (make sure the computer that you're on is located on the same network as the device you're trying to cast to) and choose the "sender for receiver" demo, and run it.
