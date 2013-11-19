@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chromecastDemo', ['chromecastDemo.config','chromecastDemo.services','ui.bootstrap','ngRoute']).
+angular.module('chromecastDemo', ['chromecastDemo.config','chromecastDemo.services','chromecastDemo.directives','ui.bootstrap','ngRoute']).
   config(['$routeProvider','$httpProvider','$locationProvider',function($routeProvider,$httpProvider,$locationProvider) {
     $routeProvider.when('/sender', {templateUrl: 'partials/sender.html', controller: 'SenderCtrl'})
     .when('/sender-for-receiver', {templateUrl: 'partials/sender_for_receiver.html', controller: 'SenderForReceiverCtrl'})

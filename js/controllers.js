@@ -17,7 +17,9 @@ function SenderCtrl($scope, $rootScope, $window, $http, ytdataapi, cfg) {
   };
 
   $scope.receivers = [];
-  $scope.appId = cfg.appId;
+  if (!$scope.appId||$scope.appId=="default") {
+  	$scope.appId = cfg.appId;
+  }
 
   var initializeApi = function() {
     $scope.cast_api = new cast.Api();
