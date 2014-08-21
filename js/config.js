@@ -18,7 +18,5 @@ CHROMECASTDEMO_CONFIG.
   value('youtubeKey', 'YOUR_YOUTUBE_KEY').
   value('traktKey', 'YOUR_TRAKT_KEY').
   value('freebaseKey', 'YOUR_FREEBASE_API_KEY').
-  //value('appId', 'YOUR_APP_ID'). // use this if you are using the custom receiver demo
-  //value('appId', 'YouTube'). // uncomment this if you are using the stock YouTube receiver demo
   value('chromecastDevice', 'NAME_YOU_GAVE_YOUR_CHROMECAST').
   value('msgNamespace','YOUR_NAMESPACE_FOR_MESSAGES'); // in the form com.example.www
