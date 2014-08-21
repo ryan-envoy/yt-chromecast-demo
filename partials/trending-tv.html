@@ -1,0 +1,4 @@
+<chromecast appid="Youtube"/>
+<div ng-init="trending()">
+<img id="{{show.tvdb_id}}" class="poster" ng-repeat="show in toptv" ng-src="{{show.poster}}" ng-click="showDetails($index)"/>
+</div>

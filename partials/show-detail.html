@@ -6,13 +6,16 @@
       </div>
     </div>
     <div class="modal-footer btn-close">
-	<div id='castbtns' ng-controller='SenderCtrl'>
-	  <div id="controls" ng-show="casting">
-	  <i class="icon-play icon-large" ng-hide="playing" ng-click="ytPlaybackCmd('playVideo');" id="playBtn"></i>
-	  <i class="icon-pause icon-large" ng-show="playing" ng-click="ytPlaybackCmd('pauseVideo');" id="pauseBtn"></i>
-	  <i class="icon-stop icon-large" ng-click="ytPlaybackCmd('stopVideo');" id="stopBtn"></i>
+	<div id='controls' ng-controller='CastCtrl'>
+	  <div id="castbtns">
+            <img ng-click="freebaseSearch()" class="btn btn-primary" ng-hide="casting" src="img/cast_off.png"/>
+            <img ng-click="disconnect()" class="btn btn-primary" ng-show="casting" src="img/cast_on.png"/>
+          </div>
+	  <div id="playbackbtns" ng-show="casting">
+	    <i class="icon-play icon-large" ng-hide="playing" ng-click="ytPlaybackCmd('playVideo');" id="playBtn"></i>
+	    <i class="icon-pause icon-large" ng-show="playing" ng-click="ytPlaybackCmd('pauseVideo');" id="pauseBtn"></i>
+	    <i class="icon-stop icon-large" ng-click="ytPlaybackCmd('stopVideo');" id="stopBtn"></i>
 	  </div>
-          <button ng-click="freebaseSearch()" class="btn btn-primary" ng-hide="casting">Cast</button>
 	</div>
           <button id='closebtn' ng-click="cancel()" class="btn btn-primary">Close</button>
     </div>

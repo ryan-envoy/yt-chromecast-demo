@@ -1,11 +1,8 @@
 'use strict';
 
-angular.module('chromecastDemo', ['chromecastDemo.config','chromecastDemo.services','chromecastDemo.directives','ui.bootstrap','ngRoute']).
+angular.module('chromecastDemo', ['chromecastDemo.config','chromecastDemo.services','chromecastDemo.directives','youtube.api.directives','youtube.api.services','ui.bootstrap','ngRoute']).
   config(['$routeProvider','$httpProvider','$locationProvider',function($routeProvider,$httpProvider,$locationProvider) {
-    $routeProvider.when('/sender', {templateUrl: 'partials/sender.html', controller: 'SenderCtrl'})
-    .when('/sender-for-receiver', {templateUrl: 'partials/sender_for_receiver.html', controller: 'SenderForReceiverCtrl'})
+    $routeProvider.when('/trending-tv', {templateUrl: 'partials/trending-tv.html', controller: 'TVCtrl'})
     .otherwise({templateUrl: 'partials/index_partial.html'});
     $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
-    //$locationProvider.html5Mode(true).hashPrefix('!');
   }]);

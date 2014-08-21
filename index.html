@@ -12,11 +12,10 @@
  <div class="navbar navbar-fixed-top">
    <div class="navbar-inner">
      <div class="container">
- <a class="brand" href="index.html">YouTube API Chromecast Experiment</a>
+ <a class="brand" href="index.html">YouTube API Chromecast Experiments (creating custom Chromecast receivers that leverage the YouTube APIs)</a>
                     <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="#/sender">Simple Sender Chrome App (using built-in YouTube Receiver)</a></li>
-              <li><a href="#/sender-for-receiver">Sender/Receiver Chrome App (where receiver uses YouTube API)</a></li>
+              <li><a href="#/trending-tv">Trending TV Demo</a></li>
             </ul>
      </div>
    </div>
@@ -31,11 +30,12 @@
       </footer>
 
     </div><!-- /container -->
-
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
-  <script src="lib/angularui/ui-bootstrap-tpls-0.6.0.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
   <script src="js/config.local.js"></script>
+  <script src="lib/youtube.api.js"></script>
   <script src="js/services.js"></script>
   <script src="js/directives.js"></script>
   <script src="js/controllers.js"></script>

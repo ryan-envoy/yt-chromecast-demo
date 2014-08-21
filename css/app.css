@@ -23,8 +23,12 @@ i.icon-large {
 	cursor: pointer;
 }
 
-#castbtns {
+#controls, #castbtns, #playbackbtns {
 	float:left;
+}
+
+#playbackbtns {
+	margin-left: 275px;
 }
 
 #closebtn {
